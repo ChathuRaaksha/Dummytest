@@ -1,25 +1,31 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
-import {Container,Row,Col,Form} from 'react-bootstrap';
+import {Form} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import '../css/Login.css';
 import Bg from '../img/bg.JPG';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 function Login() {
+  useEffect(()=>{
+    Aos.init({duration:2000});
+  })
+
   return (
     <div className='login'>
       <div className='rightSide' style={{
         backgroundColor: '#18373C',
        
       }}>
-      <h1>login Us</h1>
+      <h1 data-aos="fade-right">login Us</h1>
       <span className="primary-text">
-            <h2 className='title'>Hi, there </h2>
+            <h2 className='title' data-aos="fade-right">Hi, there </h2>
             </span>
-            <h5 className='title'>Welcome to Our </h5>
-            <h5 className='title'>test product </h5>
+            <h5 className='title' data-aos="fade-right">Welcome to Our </h5>
+            <h5 className='title' data-aos="fade-right">test product </h5>
        
-        <Form id='login-form' method='POST'>
+        <Form id='login-form' method='POST' data-aos="fade-left">
                             <Form.Group controlId="formBasicEmail">
                                
                                 <Form.Control style={{borderRadius:'90px',width:'70%'}}  type="email" placeholder="e-mail" />

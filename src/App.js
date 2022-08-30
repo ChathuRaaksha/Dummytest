@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 import Login from './Screens/Login';
@@ -16,7 +15,7 @@ function App() {
      
         <Route exact path="/" element={<Login/>}/>
         <Route exact path="/welcome" element={<Welcome/>}/>
-        <Route exact path="/add_users/:id" element={<Add_Users/>}/>
+        <Route exact path="/add_users" element={<Add_Users/>}/>
         <Route exact path="/dummies" element={<Dummies/>}/>
         </Routes >
 
